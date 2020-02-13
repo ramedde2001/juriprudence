@@ -38,6 +38,12 @@
  function myFunction()
   {
     var x = document.getElementById("cars");
+      window.loadWatsonAssistantChat({
+    integrationID: x, // The ID of this integration.
+    region: "eu-gb" // The region your integration is hosted in.
+  }).then(function(instance){
+    instance.render();
+  });
     console.log(x)
   }
 </script>
